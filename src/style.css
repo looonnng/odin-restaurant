@@ -57,3 +57,9 @@ body {
 .content__list {
   list-style: none;
 }
+
+.content__about,
+.content__hour,
+.content__location {
+  line-height: 2;
+}
