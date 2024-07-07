@@ -25,27 +25,27 @@ body {
 }
 
 .header {
-  padding: 2rem 0;
+  padding: 1rem 0;
   background-color: #494f52;
 }
 
-.nav {
-  justify-content: center;
+.nav__list {
   gap: 1rem;
+  justify-content: center;
 }
 
-.nav__btns {
+.nav__btn {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   background-color: #1a1216;
   color: #fff;
 }
 
-.nav__btns:hover {
+.nav__btn:hover {
   opacity: 0.75;
 }
 
-#content {
+.content {
   background-color: #494f52;
   max-width: 60%;
   padding: 2rem;
@@ -54,6 +54,7 @@ body {
   gap: 2rem;
 }
 
+.nav__list,
 .content__list {
   list-style: none;
 }
