@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: bisque;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.header {
+  padding: 2rem 0;
+}
+
+.nav {
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav__btns {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
