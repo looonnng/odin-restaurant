@@ -62,5 +62,14 @@ export const homePageLoad = () => {
 
   contentLocation.append(contentLocationSubtitle, contentLocationList);
 
-  return [contentTitle, contentAbout, contentHour, contentLocation];
+  const contentWrapper = document.createElement('div');
+  contentWrapper.classList.add('content-wrapper', 'col');
+  contentWrapper.append(
+    contentTitle,
+    contentAbout,
+    contentHour,
+    contentLocation,
+  );
+
+  return contentWrapper;
 };
