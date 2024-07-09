@@ -1,6 +1,6 @@
-import { homePageLoad } from './homePageLoad.js';
-import { menuPageLoad } from './menuPageLoad.js';
-import { contactPageLoad } from './contactPageLoad.js';
+import { loadHomePage } from './homePage.js';
+import { loadMenuPage } from './menuPage.js';
+import { loadContactPage } from './contactPage.js';
 import './style.css';
 
-document.querySelector('#content').appendChild(homePageLoad());
+document.querySelector('#content').appendChild(loadHomePage());
