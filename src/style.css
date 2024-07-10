@@ -45,13 +45,14 @@ body {
   opacity: 0.75;
 }
 
-.content {
+.content-wrapper {
   background-color: #494f52;
   max-width: 60%;
+
+  gap: 2rem;
   padding: 2rem;
   margin: 2rem auto;
   border-radius: 0.25rem;
-  gap: 2rem;
 }
 
 .nav__list,
@@ -63,4 +64,31 @@ body {
 .content__hour,
 .content__location {
   line-height: 2;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+}
+
+.card {
+  gap: 1rem;
+}
+
+.card__image {
+  text-align: center;
+}
+
+.menu-container {
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.content__subtitle {
+  margin-bottom: 1rem;
+}
+
+.card__title {
+  margin-bottom: 1rem;
 }
