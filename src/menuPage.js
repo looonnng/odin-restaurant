@@ -103,4 +103,36 @@ const createSection = (
   return section;
 };
 
-const loadMenuPage = () => {};
+export const loadMenuPage = () => {
+  const menuContainer = createElement('div', ['menu-container']);
+
+  const starter = createSection(
+    'starters',
+    'Starter',
+    ['Minimalist Miso Soup', 'Ambient Amuse-Bouche', 'Echoed Edamame'],
+    [
+      'A delicate miso broth with tofu, wakame seaweed, and spring onions.',
+      'A trio of small bites, featuring seasonal ingredients that set the tone for your dining experience.',
+      'Steamed edamame with a touch of sea salt and a hint of lime zest.',
+    ],
+    [myImage, myImage, myImage],
+    ['Placeholder image'],
+  );
+
+  const mainCourse = createSection(
+    'main-course',
+    'Main Course',
+    ['Dubbed Duck Breast', 'Sonic Mushroom Risotto', 'Subdued Sea Bass'],
+    [
+      'Seared duck breast with a honey-soy glaze, served with sautéed bokchoy and jasmine rice.',
+      'Creamy risotto with wild mushrooms, truffle oil, and Parmesan cheese.',
+      'Pan-seared sea bass with a citrus beurre blanc, accompanied by asparagus spears and fingerling potatoes.',
+    ],
+    [myImage, myImage, myImage],
+    ['Placeholder image'],
+  );
+
+  menuContainer.append(starter, mainCourse);
+
+  return menuContainer;
+};
