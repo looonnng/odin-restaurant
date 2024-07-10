@@ -1,4 +1,4 @@
-import myImage from './images/placeholder1.png';
+import myImage from './images/placeholder.png';
 
 // Utility Function
 const createElement = (type, classNames = [], text = '', attributes = {}) => {
@@ -39,4 +39,41 @@ const createCardImage = (imageSource, altText) => {
   return imageWrapper;
 };
 
+const createCardTitle = (cardTitle) => {
+  return createElement('h3', ['card__title'], cardTitle);
+};
+
+const createCardText = (cardText) => {
+  return createElement('p', ['card__text'], cardText);
+};
+
+const createCardInfo = (cardTitles = [], cardTexts = []) => {
+  const cardInfo = createElement('div', ['card__info']);
+
+  cardTitles.forEach((title, index) => {
+    cardInfo.appendChild(createCardTitle(title));
+    cardInfo.appendChild(createCardText(cardTexts[index]));
+  });
+
+  return cardInfo;
+};
+
+const createCard = (
+  cardTitles = [],
+  cardTexts = [],
+  imageSource = '',
+  altText = '',
+) => {
+  const cardWrapper = createCardWrapper();
+
+  cardTitles.forEach((_, index) => {
+    const cardInfo = createCardInfo(cardTitles, cardTexts);
+    const cardImage = createCardImage(imageSource, altText);
+
+    cardWrapper.appendChild(cardImage);
+    cardWrapper.appendChild(cardInfo);
+  });
+
+  return cardWrapper;
+};
 const loadMenuPage = () => {};
