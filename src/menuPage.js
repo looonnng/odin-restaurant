@@ -66,13 +66,11 @@ const createCard = (
 ) => {
   const cardWrapper = createCardWrapper();
 
-  cardTitles.forEach((_, index) => {
-    const cardInfo = createCardInfo(cardTitles, cardTexts);
-    const cardImage = createCardImage(imageSource, altText);
+  const cardInfo = createCardInfo(cardTitles, cardTexts);
+  const cardImage = createCardImage(imageSource, altText);
 
-    cardWrapper.appendChild(cardImage);
-    cardWrapper.appendChild(cardInfo);
-  });
+  cardWrapper.appendChild(cardImage);
+  cardWrapper.appendChild(cardInfo);
 
   return cardWrapper;
 };
@@ -93,7 +91,12 @@ const createSection = (
 
   cardTitles.forEach((title, index) => {
     cardContainer.appendChild(
-      createCard([title], [cardTexts], imageSources[index], altTexts[index]),
+      createCard(
+        [title],
+        [cardTexts[index]],
+        imageSources[index],
+        altTexts[index],
+      ),
     );
   });
 
