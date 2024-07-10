@@ -76,4 +76,31 @@ const createCard = (
 
   return cardWrapper;
 };
+
+const createSection = (
+  sectionClassName,
+  sectionSubtitle,
+  cardTitles = [],
+  cardTexts = [],
+  imageSources = [],
+  altTexts = [],
+) => {
+  const section = createElement('div', [sectionClassName]);
+
+  const sectionSub = createSubtitle(sectionSubtitle);
+
+  const cardContainer = createCardContainer();
+
+  cardTitles.forEach((title, index) => {
+    cardContainer.appendChild(
+      createCard([title], [cardTexts], imageSources[index], altTexts[index]),
+    );
+  });
+
+  section.appendChild(sectionSub);
+  section.appendChild(cardContainer);
+
+  return section;
+};
+
 const loadMenuPage = () => {};
