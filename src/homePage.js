@@ -1,4 +1,4 @@
-export const homePageLoad = () => {
+export const loadHomePage = () => {
   const contentTitle = document.createElement('h1');
   contentTitle.textContent = 'Echo Chamber';
   contentTitle.classList.add('content__title');
