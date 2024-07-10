@@ -104,7 +104,7 @@ const createSection = (
 };
 
 export const loadMenuPage = () => {
-  const menuContainer = createElement('div', ['menu-container']);
+  const menuContainer = createElement('div', ['menu-container', 'col']);
 
   const starter = createSection(
     'starters',
