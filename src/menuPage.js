@@ -119,7 +119,7 @@ export const loadMenuPage = () => {
       'Steamed edamame with a touch of sea salt and a hint of lime zest.',
     ],
     [myImage, myImage, myImage],
-    ['Placeholder image'],
+    ['Placeholder image', 'Placeholder image', 'Placeholder image'],
   );
 
   const mainCourse = createSection(
@@ -132,10 +132,23 @@ export const loadMenuPage = () => {
       'Pan-seared sea bass with a citrus beurre blanc, accompanied by asparagus spears and fingerling potatoes.',
     ],
     [myImage, myImage, myImage],
-    ['Placeholder image'],
+    ['Placeholder image', 'Placeholder image', 'Placeholder image'],
   );
 
-  menuContainer.append(starter, mainCourse);
+  const drinks = createSection(
+    'drinks',
+    'Drinks',
+    ['Deep Dub Daiquiri', 'Minimalist Martini', 'Echo Espresso'],
+    [
+      'A classic daiquiri with a twist of fresh basil and lime.',
+      'A clean, crisp martini with premium gin and a touch of dry vermouth, garnished with an olive.',
+      'A rich, smooth espresso to complement your meal.',
+    ],
+    [myImage, myImage, myImage],
+    ['PlaceHolder image', 'Placeholder image', 'Placeholder image'],
+  );
+
+  menuContainer.append(starter, mainCourse, drinks);
 
   return menuContainer;
 };
