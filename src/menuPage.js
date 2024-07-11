@@ -107,7 +107,7 @@ const createSection = (
 };
 
 export const loadMenuPage = () => {
-  const menuContainer = createElement('div', ['menu-container', 'col']);
+  const menuWrapper = createElement('div', ['menu-wrapper', 'col']);
 
   const starter = createSection(
     'starters',
@@ -148,7 +148,7 @@ export const loadMenuPage = () => {
     ['PlaceHolder image', 'Placeholder image', 'Placeholder image'],
   );
 
-  menuContainer.append(starter, mainCourse, drinks);
+  menuWrapper.append(starter, mainCourse, drinks);
 
-  return menuContainer;
+  return menuWrapper;
 };
