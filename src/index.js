@@ -3,9 +3,11 @@ import { loadMenuPage } from './menuPage.js';
 import { loadContactPage } from './contactPage.js';
 import './style.css';
 
-const handleNavBtn = (event) => {
-  const content = document.querySelector('#content');
+// Initial Page Load
+const content = document.querySelector('#content');
+content.appendChild(loadHomePage());
 
+const handleNavBtn = (event) => {
   if (event.target.textContent === 'Home')
     content.replaceChildren(loadHomePage());
   else if (event.target.textContent === 'Menu')
