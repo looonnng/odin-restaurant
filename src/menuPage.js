@@ -1,7 +1,7 @@
 import myImage from './images/placeholder.png';
 
 // Utility Function
-const createElement = (type, classNames = [], text = '', attributes = {}) => {
+const createMyElement = (type, classNames = [], text = '', attributes = {}) => {
   const element = document.createElement(type);
 
   element.classList.add(...classNames);
@@ -16,19 +16,19 @@ const createElement = (type, classNames = [], text = '', attributes = {}) => {
 };
 
 const createSubtitle = (subtitle) => {
-  return createElement('h2', ['content__subtitle'], subtitle);
+  return createMyElement('h2', ['content__subtitle'], subtitle);
 };
 
 const createCardContainer = () => {
-  return createElement('div', ['card-container']);
+  return createMyElement('div', ['card-container']);
 };
 
 const createCardWrapper = () => {
-  return createElement('div', ['card', 'wrapper', 'col']);
+  return createMyElement('div', ['card', 'wrapper', 'col']);
 };
 
 const createCardImage = (imageSource, altText) => {
-  const imageWrapper = createElement('div', ['card__image']);
+  const imageWrapper = createMyElement('div', ['card__image']);
 
   const imageElement = new Image();
   imageElement.src = imageSource;
@@ -40,15 +40,15 @@ const createCardImage = (imageSource, altText) => {
 };
 
 const createCardTitle = (cardTitle) => {
-  return createElement('h3', ['card__title'], cardTitle);
+  return createMyElement('h3', ['card__title'], cardTitle);
 };
 
 const createCardText = (cardText) => {
-  return createElement('p', ['card__text'], cardText);
+  return createMyElement('p', ['card__text'], cardText);
 };
 
 const createCardInfo = (cardTitles = [], cardTexts = []) => {
-  const cardInfo = createElement('div', ['card__info']);
+  const cardInfo = createMyElement('div', ['card__info']);
 
   cardTitles.forEach((title, index) => {
     cardInfo.appendChild(createCardTitle(title));
@@ -83,7 +83,7 @@ const createSection = (
   imageSources = [],
   altTexts = [],
 ) => {
-  const section = createElement('div', [...sectionClassNames]);
+  const section = createMyElement('div', [...sectionClassNames]);
 
   const sectionSub = createSubtitle(sectionSubtitle);
 
@@ -107,7 +107,7 @@ const createSection = (
 };
 
 export const loadMenuPage = () => {
-  const menuWrapper = createElement('div', ['menu-wrapper', 'col']);
+  const menuWrapper = createMyElement('div', ['menu-wrapper', 'col']);
 
   const starter = createSection(
     ['starters', 'col'],
