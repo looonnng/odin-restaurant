@@ -12,15 +12,15 @@ export const loadContactPage = () => {
 
   contactMapWrapper.appendChild(contactMap);
 
-  const contentHour = document.createElement('div');
-  contentHour.classList.add('content__hour');
+  const contactHour = document.createElement('div');
+  contactHour.classList.add('contact__hour');
 
-  const contentHourSubtitle = document.createElement('h2');
-  contentHourSubtitle.classList.add('content__subtitle');
-  contentHourSubtitle.textContent = 'Hours';
+  const contactHourSubtitle = document.createElement('h2');
+  contactHourSubtitle.classList.add('content__subtitle');
+  contactHourSubtitle.textContent = 'Hours';
 
-  const contentHourList = document.createElement('ul');
-  contentHourList.classList.add('content__list');
+  const contactHourList = document.createElement('ul');
+  contactHourList.classList.add('content__list');
 
   const hours = [
     'Monday - Thursday: 6:00 PM - 10:00 PM',
@@ -29,23 +29,23 @@ export const loadContactPage = () => {
   ];
 
   hours.forEach((hour) => {
-    const contentHourListItem = document.createElement('li');
-    contentHourListItem.classList.add('content__list-item');
-    contentHourListItem.textContent = hour;
-    contentHourList.appendChild(contentHourListItem);
+    const contactHourListItem = document.createElement('li');
+    contactHourListItem.classList.add('content__list-item');
+    contactHourListItem.textContent = hour;
+    contactHourList.appendChild(contactHourListItem);
   });
 
-  contentHour.append(contentHourSubtitle, contentHourList);
+  contactHour.append(contactHourSubtitle, contactHourList);
 
-  const contentLocation = document.createElement('div');
-  contentLocation.classList.add('content__location');
+  const contactLocation = document.createElement('div');
+  contactLocation.classList.add('contact__location');
 
-  const contentLocationSubtitle = document.createElement('h2');
-  contentLocationSubtitle.classList.add('content__subtitle');
-  contentLocationSubtitle.textContent = 'Location';
+  const contactLocationSubtitle = document.createElement('h2');
+  contactLocationSubtitle.classList.add('content__subtitle');
+  contactLocationSubtitle.textContent = 'Location';
 
-  const contentLocationList = document.createElement('ul');
-  contentLocationList.classList.add('content__list');
+  const contactLocationList = document.createElement('ul');
+  contactLocationList.classList.add('content__list');
 
   const locations = [
     'Echo Chamber Eatery',
@@ -54,21 +54,21 @@ export const loadContactPage = () => {
   ];
 
   locations.forEach((location) => {
-    const contentLocationListItem = document.createElement('li');
-    contentLocationListItem.classList.add('content__list-item');
-    contentLocationListItem.textContent = location;
-    contentLocationList.appendChild(contentLocationListItem);
+    const contactLocationListItem = document.createElement('li');
+    contactLocationListItem.classList.add('content__list-item');
+    contactLocationListItem.textContent = location;
+    contactLocationList.appendChild(contentLocationListItem);
   });
 
-  contentLocation.append(contentLocationSubtitle, contentLocationList);
+  contactLocation.append(contactLocationSubtitle, contactLocationList);
 
   const contactText = document.createElement('div');
   contactText.classList.add('col');
-  contactText.append(contentHour, contentLocation);
+  contactText.append(contactHour, contactLocation);
 
-  const contentWrapper = document.createElement('div');
-  contentWrapper.classList.add('content-wrapper', 'row');
-  contentWrapper.append(contactMapWrapper, contactText);
+  const contactWrapper = document.createElement('div');
+  contactWrapper.classList.add('contact-wrapper', 'row');
+  contactWrapper.append(contactMapWrapper, contactText);
 
-  return contentWrapper;
+  return contactWrapper;
 };
