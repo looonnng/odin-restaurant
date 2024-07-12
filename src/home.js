@@ -1,3 +1,3 @@
-const loadContactPage = () => {
+const loadHomePage = () => {
   
 }

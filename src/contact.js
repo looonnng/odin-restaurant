@@ -1,4 +1,4 @@
-export const loadHomePage = () => {
+export const loadContactPage = () => {
   const contactMapWrapper = document.createElement('div');
   contactMapWrapper.classList.add('contact__map-wrapper');
   const contactMap = document.createElement('iframe');
