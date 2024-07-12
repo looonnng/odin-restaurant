@@ -1,16 +1,16 @@
 export const loadHomePage = () => {
-  const contentTitle = document.createElement('h1');
-  contentTitle.textContent = 'Echo Chamber';
-  contentTitle.classList.add('content__title');
+  const contactMapWrapper = document.createElement('div');
+  contactMapWrapper.classList.add('contact__map-wrapper');
+  const contactMap = document.createElement('iframe');
+  contactMap.classList.add('contact__map');
+  contactMap.setAttribute(
+    'src',
+    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14936.051737239643!2d-87.0710941!3d20.6283296!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e43f0e2c54f3f%3A0xe3f597227e1aaa8f!2sAnimallandia%20Maya!5e0!3m2!1sen!2sus!4v1720733205630!5m2!1sen!2sus',
+  );
+  contactMap.style.width = '600px';
+  contactMap.style.height = '450px';
 
-  const contentAbout = document.createElement('div');
-  contentAbout.classList.add('content__about');
-
-  const contentText = document.createElement('p');
-  contentText.textContent =
-    'Welcome to Echo Chamber, where minimalist beats meet culinary artistry. Located in the heart of the city, our restaurant offers a unique dining experience that blends the deep, hypnotic sounds of dub and minimalist techno with innovative cuisine.';
-
-  contentAbout.appendChild(contentText);
+  contactMapWrapper.appendChild(contactMap);
 
   const contentHour = document.createElement('div');
   contentHour.classList.add('content__hour');
