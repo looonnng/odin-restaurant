@@ -1,6 +1,6 @@
-import { loadHomePage } from './homePage.js';
-import { loadMenuPage } from './menuPage.js';
-import { loadContactPage } from './contactPage.js';
+import { loadHomePage } from './home.js';
+import { loadMenuPage } from './menu.js';
+import { loadContactPage } from './contact.js';
 import './style.css';
 
 // Initial Page Load
@@ -15,6 +15,7 @@ const handleNavBtn = (event) => {
   else content.replaceChildren(loadContactPage());
 };
 
+// Attach listeners to each button
 document.querySelectorAll('.nav__btn').forEach((button) => {
   button.addEventListener('click', handleNavBtn);
 });
