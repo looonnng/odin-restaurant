@@ -47,8 +47,6 @@ body {
 
 .content-wrapper {
   background-color: #494f52;
-  max-width: 60%;
-
   gap: 2rem;
   padding: 2rem;
   margin: 2rem auto;
@@ -80,15 +78,17 @@ body {
   text-align: center;
 }
 
+.card__title {
+  margin-bottom: 1rem;
+}
+
 .menu-container {
   margin: 2rem 0;
   gap: 1rem;
 }
 
-.content__subtitle {
-  margin-bottom: 1rem;
-}
-
-.card__title {
-  margin-bottom: 1rem;
+.starters,
+.main-course,
+.drinks {
+  gap: 1rem;
 }
