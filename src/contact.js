@@ -57,7 +57,7 @@ export const loadContactPage = () => {
     const contactLocationListItem = document.createElement('li');
     contactLocationListItem.classList.add('content__list-item');
     contactLocationListItem.textContent = location;
-    contactLocationList.appendChild(contentLocationListItem);
+    contactLocationList.appendChild(contactLocationListItem);
   });
 
   contactLocation.append(contactLocationSubtitle, contactLocationList);
