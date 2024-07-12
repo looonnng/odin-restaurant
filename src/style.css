@@ -45,7 +45,7 @@ body {
   opacity: 0.75;
 }
 
-.content-wrapper {
+.contact-wrapper {
   background-color: #494f52;
   gap: 2rem;
   padding: 2rem;
@@ -58,9 +58,9 @@ body {
   list-style: none;
 }
 
-.content__about,
-.content__hour,
-.content__location {
+.contact__about,
+.contact__hour,
+.contact__location {
   line-height: 2;
 }
 
