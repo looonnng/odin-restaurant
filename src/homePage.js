@@ -62,14 +62,13 @@ export const loadHomePage = () => {
 
   contentLocation.append(contentLocationSubtitle, contentLocationList);
 
+  const contactText = document.createElement('div');
+  contactText.classList.add('col');
+  contactText.append(contentHour, contentLocation);
+
   const contentWrapper = document.createElement('div');
-  contentWrapper.classList.add('content-wrapper', 'col');
-  contentWrapper.append(
-    contentTitle,
-    contentAbout,
-    contentHour,
-    contentLocation,
-  );
+  contentWrapper.classList.add('content-wrapper', 'row');
+  contentWrapper.append(contactMapWrapper, contactText);
 
   return contentWrapper;
 };
