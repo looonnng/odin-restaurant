@@ -76,14 +76,14 @@ const createCard = (
 };
 
 const createSection = (
-  sectionClassName,
+  sectionClassNames = [],
   sectionSubtitle,
   cardTitles = [],
   cardTexts = [],
   imageSources = [],
   altTexts = [],
 ) => {
-  const section = createElement('div', [sectionClassName]);
+  const section = createElement('div', [...sectionClassNames]);
 
   const sectionSub = createSubtitle(sectionSubtitle);
 
@@ -110,7 +110,7 @@ export const loadMenuPage = () => {
   const menuWrapper = createElement('div', ['menu-wrapper', 'col']);
 
   const starter = createSection(
-    'starters',
+    ['starters', 'col'],
     'Starter',
     ['Minimalist Miso Soup', 'Ambient Amuse-Bouche', 'Echoed Edamame'],
     [
@@ -123,7 +123,7 @@ export const loadMenuPage = () => {
   );
 
   const mainCourse = createSection(
-    'main-course',
+    ['main-course', 'col'],
     'Main Course',
     ['Dubbed Duck Breast', 'Sonic Mushroom Risotto', 'Subdued Sea Bass'],
     [
@@ -136,7 +136,7 @@ export const loadMenuPage = () => {
   );
 
   const drinks = createSection(
-    'drinks',
+    ['drinks', 'col'],
     'Drinks',
     ['Deep Dub Daiquiri', 'Minimalist Martini', 'Echo Espresso'],
     [
