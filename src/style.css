@@ -6,6 +6,7 @@
 
 html,
 body {
+  height: 100%;
   background-color: #242729;
   color: #fff;
 }
@@ -43,6 +44,35 @@ body {
 
 .nav__btn:hover {
   opacity: 0.75;
+}
+
+.home-wrapper {
+  padding: 2rem;
+}
+
+.home__title {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.home__text,
+.home-image-wrapper {
+  flex: 1;
+}
+
+
+.home__paragraph {
+  line-height: 1.5;
+}
+
+.home-image-wrapper {
+  height: 100%;
+  flex-basis: 60%;
+  text-align: right;
+}
+
+.home-image {
+  max-height: 75vh;
 }
 
 .contact-wrapper {
