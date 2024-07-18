@@ -27,16 +27,14 @@ const createCardWrapper = () => {
   return createMyElement('div', ['card', 'wrapper', 'col']);
 };
 
-export const createImage = (imageSource, altText) => {
-  const imageWrapper = createMyElement('div', ['card__image']);
-
+export const createImage = (imageSource, altText, classNames = []) => {
+  
   const imageElement = new Image();
   imageElement.src = imageSource;
   imageElement.alt = altText;
+  imageElement.classList.add(...classNames);
 
-  imageWrapper.appendChild(imageElement);
-
-  return imageWrapper;
+  return imageElement;
 };
 
 const createCardTitle = (cardTitle) => {
@@ -65,11 +63,13 @@ const createCard = (
   altText = '',
 ) => {
   const cardWrapper = createCardWrapper();
-
+  const cardImageWrapper = createMyElement('div', ['card__image']);
+  
   const cardInfo = createCardInfo(cardTitles, cardTexts);
   const cardImage = createImage(imageSource, altText);
 
-  cardWrapper.appendChild(cardImage);
+  cardImageWrapper.appendChild(cardImage);
+  cardWrapper.appendChild(cardImageWrapper);
   cardWrapper.appendChild(cardInfo);
 
   return cardWrapper;
