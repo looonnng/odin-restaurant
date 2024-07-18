@@ -1,7 +1,7 @@
 import myImage from './images/placeholder.png';
 
 // Utility Function
-const createMyElement = (type, classNames = [], text = '', attributes = {}) => {
+export const createMyElement = (type, classNames = [], text = '', attributes = {}) => {
   const element = document.createElement(type);
 
   element.classList.add(...classNames);
@@ -27,7 +27,7 @@ const createCardWrapper = () => {
   return createMyElement('div', ['card', 'wrapper', 'col']);
 };
 
-const createCardImage = (imageSource, altText) => {
+export const createImage = (imageSource, altText) => {
   const imageWrapper = createMyElement('div', ['card__image']);
 
   const imageElement = new Image();
@@ -67,7 +67,7 @@ const createCard = (
   const cardWrapper = createCardWrapper();
 
   const cardInfo = createCardInfo(cardTitles, cardTexts);
-  const cardImage = createCardImage(imageSource, altText);
+  const cardImage = createImage(imageSource, altText);
 
   cardWrapper.appendChild(cardImage);
   cardWrapper.appendChild(cardInfo);
